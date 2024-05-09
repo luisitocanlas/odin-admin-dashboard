@@ -87,7 +87,7 @@ input[type='search']:focus {
 
 .header-user {
 	display: grid;
-	grid-template-columns: repeat(2, 30px) 1fr;
+	grid-template-columns: repeat(2, 40px) 1fr;
 	gap: 15px;
 	align-items: center;
 	/* justify-items: center; */
@@ -100,6 +100,14 @@ input[type='search']:focus {
 }
 
 .header-greeting {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	align-items: center;
+}
+
+.header-greeting img {
+	width: 80px;
+	height: auto;
 }
 
 .header-buttons {
