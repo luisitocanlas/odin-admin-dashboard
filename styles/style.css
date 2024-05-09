@@ -10,6 +10,7 @@
 	--black: black;
 	--white: white;
 	--light-gray: #e9ecef;
+	--dark-gray: #8d99ae;
 	--eggshell: #f4f1de;
 	--burnt-sienna: #e07a5f;
 	--delft-blue: #3d405b;
@@ -61,7 +62,8 @@ header {
 }
 
 .header-search svg,
-.header-user svg {
+.header-user svg,
+li > svg {
 	width: 24px;
 }
 
@@ -187,4 +189,64 @@ svg.nav-icon {
 
 main {
 	grid-column: 2 / 3;
+
+	background-color: var(--light-gray);
+
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+}
+
+.project-container {
+	padding: 15px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 15px;
+}
+
+.project-item {
+	background-color: var(--white);
+	border-radius: 10px;
+	padding: 30px;
+	border-left: 10px solid var(--sunset);
+
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.project-item h3,
+.project-item p {
+	grid-column: 1 / 3;
+}
+
+.project-item p {
+	line-height: 1;
+	margin-bottom: 1.5rem;
+	color: var(--dark-gray);
+}
+
+.project-item ul {
+	grid-column: 2/3;
+	justify-self: end;
+
+	display: grid;
+	grid-template-columns: repeat(3, 50px);
+	justify-items: end;
+}
+
+.announcement {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+.trending {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
