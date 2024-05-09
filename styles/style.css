@@ -1,5 +1,11 @@
 @import url('./css-reset.css');
 
+.roboto-regular {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 :root {
 	--black: black;
 	--white: white;
@@ -32,9 +38,11 @@ main {
 }
 
 body {
+	font-family: 'Roboto', sans-serif;
+
 	display: grid;
 	grid-template-columns: max(300px, 15%) 4fr;
-	grid-template-rows: 1fr 7fr;
+	grid-template-rows: 250px 7fr;
 
 	background-color: var(white);
 }
