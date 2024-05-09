@@ -52,15 +52,16 @@ header {
 	gap: 15px;
 }
 
+.header-search svg,
+.header-user svg {
+	width: 24px;
+}
+
 .header-search {
 	display: grid;
 	grid-template-columns: 30px 80%;
 	align-items: center;
 	gap: 10px;
-}
-
-.header-search svg {
-	width: 24px;
 }
 
 input[type='search'] {
@@ -70,7 +71,24 @@ input[type='search'] {
 	background-color: var(--light-gray);
 }
 
+input[type='search']:focus {
+	outline: none;
+	border-color: var(--delft-blue);
+	box-shadow: 0 0 5px var(--delft-blue);
+}
+
 .header-user {
+	display: grid;
+	grid-template-columns: repeat(2, 30px) 1fr;
+	gap: 15px;
+	align-items: center;
+	/* justify-items: center; */
+	justify-self: end;
+}
+
+.header-user p {
+	font-size: 18px;
+	font-weight: 700;
 }
 
 .header-greeting {
